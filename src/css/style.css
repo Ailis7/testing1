@@ -1,0 +1,65 @@
+.main {
+ width: 720px;
+ height: 150px;
+ /* background-color: gray; */
+ display: flex;
+  /* justify-content: center;  */
+  /* align-items: center; */
+  /* position: relative; */
+  /* z-index: 1; */
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.image {
+  height: 40px;
+  width: 80px;
+  position: relative;
+}
+img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.dark::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.85;
+}
+
+.valid {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.numbers, .click {
+  width: 250px;
+  height: 40px;
+  font-size: large;
+}
+
+.click {
+  background-color: green;
+  color: white;
+}
+
+.validing::after {
+  content: "Luhn Algorithm Check! \01F44D";
+  /* position: absolute; */
+  background-color: green;
+  color: white;
+}
+
+.notValiding::after {
+  content: "Luhn Algorithm NOT check!	\01F44E";
+  /* position: absolute; */
+  background-color: red;
+  color: white;
+}
