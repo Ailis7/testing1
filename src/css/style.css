@@ -1,12 +1,7 @@
 .main {
  width: 720px;
  height: 150px;
- /* background-color: gray; */
  display: flex;
-  /* justify-content: center;  */
-  /* align-items: center; */
-  /* position: relative; */
-  /* z-index: 1; */
   flex-wrap: wrap;
   align-content: flex-start;
 }
@@ -52,14 +47,12 @@ img {
 
 .validing::after {
   content: "Luhn Algorithm Check! \01F44D";
-  /* position: absolute; */
   background-color: green;
   color: white;
 }
 
 .notValiding::after {
   content: "Luhn Algorithm NOT check!	\01F44E";
-  /* position: absolute; */
   background-color: red;
   color: white;
 }

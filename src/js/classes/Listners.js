@@ -44,13 +44,16 @@ export default class Listners {
 
   validating() {
     this.button.addEventListener('click', () => {
-      if (this.realCard && luhnAlgorithm(this.input.value)) {
+      const clear = () => {
         this.validTool.classList.remove('validing');
         this.validTool.classList.remove('notValiding');
+      };
+
+      if (this.realCard && luhnAlgorithm(this.input.value)) {
+        clear();
         this.validTool.classList.add('validing');
       } else {
-        this.validTool.classList.remove('validing');
-        this.validTool.classList.remove('notValiding');
+        clear();
         this.validTool.classList.add('notValiding');
       }
     });
