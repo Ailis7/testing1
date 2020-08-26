@@ -8,9 +8,8 @@ install:
   - npm install # команда установки зависимостей
 build: off
 build_script:
+  - npm start
   - npm run build # команда сборки
-hosts:
-  queue-server: localhost:8080
 test_script:
   - npm run lint && npm test # скрипт тестирования
 deploy_script: # скрипт развёртывания
