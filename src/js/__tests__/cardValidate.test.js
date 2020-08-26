@@ -4,7 +4,7 @@ jest.setTimeout(30000); // default puppeteer timeout
 describe('card validate', () => {
   let browser = null;
   let page = null;
-  const baseUrl = 'http://localhost:8080';
+  const baseUrl = 'http://127.0.0.1:5500/dist/index.html';
   beforeAll(async () => {
     browser = await puppetteer.launch();
     page = await browser.newPage();
