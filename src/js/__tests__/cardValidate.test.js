@@ -7,7 +7,7 @@ describe('card validate', () => {
   const baseUrl = 'http://localhost:8080';
   beforeAll(async () => {
     browser = await puppeteer.launch({
-      headless: false, // show gui
+      headless: true, // show gui
       slowMo: 100,
       devtools: true, // show devTools
     });
