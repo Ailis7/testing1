@@ -6,11 +6,7 @@ describe('card validate', () => {
   let page = null;
   const baseUrl = 'http://localhost:8080';
   beforeAll(async () => {
-    browser = await puppetteer.launch({
-      headless: false, // show gui
-      slowMo: 100,
-      devtools: true, // show devTools
-    });
+    browser = await puppetteer.launch();
     page = await browser.newPage();
   });
   afterAll(async () => {
