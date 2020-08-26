@@ -1,12 +1,16 @@
-import puppetteer from 'puppeteer';
+import puppeteer from 'puppeteer';
 
 jest.setTimeout(30000); // default puppeteer timeout
 describe('card validate', () => {
   let browser = null;
   let page = null;
-  const baseUrl = 'http://127.0.0.1:5500/dist/index.html';
+  const baseUrl = 'http://localhost:8080';
   beforeAll(async () => {
-    browser = await puppetteer.launch();
+    browser = await puppeteer.launch({
+      headless: false, // show gui
+      slowMo: 100,
+      devtools: true, // show devTools
+    });
     page = await browser.newPage();
   });
   afterAll(async () => {
